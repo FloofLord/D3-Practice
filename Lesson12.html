@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+
+<style>
+       
+      </style>
+      <body>
+        <script>
+          const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+          const w = 500;
+          const h = 100;
+
+          const svg = d3.select("body")
+                        .append("svg")
+                        .attr("height", h)
+                        .attr("width",w)
+          
+              svg.selectAll("rect")
+                  .data(dataset)
+                  .enter()
+                  .append("rect")
+                  .attr("height",100)
+                  .attr("width",25)   // for the size of the rectangle it
+                  .attr("x",0)      //for the postion in the svg canvas
+                  .attr("y",0);
+                    
+      
+            
+           
+        </script>
+      </body>
